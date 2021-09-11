@@ -2,12 +2,12 @@ import React from "react";
 
 const InputSecond = () => {
     const [text, setText] = React.useState('')
+
     const handleChangeInput = (event) => {
         event.preventDefault()
         setText(event.target.value)
 
     }
-
 
     const handleShowAlert =() => {
         alert(text.length)

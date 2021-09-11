@@ -4,26 +4,23 @@ let count = 3
 console.log(Date())
 const OrderedListFourth = () => {
     const [valueText, setValueText] = React.useState('')
-    const handleInputChange = (event) => {
-        setValueText(event.target.value)
-    }
-
+    const [id, setId] = React.useState('')
     const [item, setItem] = React.useState([
         {id: 1, name: 'First item'},
         {id: 2, name: 'Second item'},
         {id: 3, name: 'Third item'}
     ])
 
-    console.log(item)
+    const handleInputChange = (event) => {
+        setValueText(event.target.value)
+    }
+
     const handleFormSubmit = (event) => {
         event.preventDefault()
         setItem([...item, {id: count+=1, name: valueText}])
         setValueText('')
-        console.log('count from function:', count)
     }
-    console.log('count from component:', count)
-    const [id, setId] = React.useState('')
-    console.log('useState')
+
     const handleDeleteElem = (event) => {
         setId(Number(event.target.value))
     }
@@ -38,7 +35,6 @@ const OrderedListFourth = () => {
             }
         }))
         setId('')
-
     }
 
     return (

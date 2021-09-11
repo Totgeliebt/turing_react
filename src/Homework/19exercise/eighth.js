@@ -1,12 +1,9 @@
 import React from "react";
 
 const SelectEighth = () => {
-    const eight = 8
-    const sixteen = 16
-    const twentyFour = 24
-    const thirtySix = 36
+    const options = [8, 16, 24, 36]
 
-    const [selectSize, setSelectSize] = React.useState(eight)
+    const [selectSize, setSelectSize] = React.useState(8)
     const handleTextSize = (event) => {
         setSelectSize(event.target.value)
 
@@ -15,10 +12,7 @@ const SelectEighth = () => {
         <>
             <p style={{fontSize: `${selectSize}px`}}>Lorem ipsum</p>
             <select onChange={handleTextSize} value={selectSize}>
-                <option value={eight}>Шрифт {eight} px</option>
-                <option value={sixteen}>Шрифт {sixteen} px</option>
-                <option value={twentyFour}>Шрифт {twentyFour} px</option>
-                <option value={thirtySix}>Шрифт {thirtySix} px</option>
+                {options.map((size, index) => (<option value={size}>Шрифт {size} px</option>))}
             </select>
         </>
     )

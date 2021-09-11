@@ -11,8 +11,8 @@ const TextAreaFirst = () => {
 
     return (
         <>
-        <textarea value={textArea} onChange={handleTextAreaChange}>Введите текст</textarea>
-        <p>Здесь будет выводиться текст: {textArea}</p>
+            <textarea value={textArea} onChange={handleTextAreaChange}>Введите текст</textarea>
+            <p>Здесь будет выводиться текст: {textArea}</p>
         </>
     )
 }
