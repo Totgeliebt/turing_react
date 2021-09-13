@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react'
+import Common from './Homework/18exercise/index'
+// import ToDo from './pages/ToDo'
+import RefClassComponent from './lifecoding/ref'
+
+class App extends React.Component {
+    render() {
+        return (
+            <>
+                <Common/>
+                <RefClassComponent/>
+                {/*<h1>APP JS</h1>*/}
+                {/*<ToDo/>*/}
+            </>
+        )
+    }
 }
-
 export default App;
