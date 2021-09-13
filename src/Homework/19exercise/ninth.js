@@ -2,10 +2,12 @@ import React from "react";
 
 const FormNinth = () => {
     const [value, setValue] = React.useState('')
+    const [option, setOption] = React.useState([])
+
     const handleInputChange = (event) => {
         setValue(event.target.value)
     }
-    const [option, setOption] = React.useState([])
+
     const handleAddOption = () => {
         setOption([...option, {name: value}])
         setValue('')
@@ -14,6 +16,7 @@ const FormNinth = () => {
     const handleFormSubmit = (event) => {
         event.preventDefault()
     }
+
     return(
         <form onSubmit={handleFormSubmit}>
             <input onChange={handleInputChange} type="text" value={value}/>
