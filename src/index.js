@@ -7,14 +7,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {store, persistor} from './app/store'
-import ShowHomework20 from "./Homework/20exercise";
+import ScrollDemo from "./Homework/20exercise/4Func";
+import ButtonScrollClass from "./Homework/20exercise/4Class";
 
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
                  <BrowserRouter>
-                     <ShowHomework20/>
+                     <ButtonScrollClass/>
                </BrowserRouter>
           </PersistGate>
       </Provider>

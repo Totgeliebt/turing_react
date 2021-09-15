@@ -10,8 +10,8 @@ class ButtonScrollClass extends React.Component {
     render() {
         return (
             <>
-                <button onClick={ () => this.myRef.current.scrollIntoView() }>Scroll down</button>
-                <div>The standard Lorem Ipsum passage, used since the 1500s
+                <button onClick={ () => this.myRef.current.scrollIntoView({block: 'end'}) }>Scroll down</button>
+                <div ref={this.myRef}>The standard Lorem Ipsum passage, used since the 1500s
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
                     Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
@@ -41,7 +41,7 @@ class ButtonScrollClass extends React.Component {
                     "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of p
 
                 </div>
-                <div ref={this.myRef}>End of text</div>
+                <div >End of text</div>
             </>
         )
     }

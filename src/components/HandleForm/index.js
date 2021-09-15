@@ -1,7 +1,8 @@
 import React, {useEffect} from 'react';
 import styles from './HandleForm.module.css'
-import Button from '../Button'
+import ButtonOur from '../Button'
 import _ from 'lodash'
+import { Button } from '@material-ui/core'
 
 const HandleForm = ({onClick}) => {
 
@@ -40,7 +41,8 @@ const HandleForm = ({onClick}) => {
     return (
         <form className={styles.handleForm} onSubmit={handleFormSubmit}>
             <input className={styles.enterInput} name="todo" value={toDo} onChange={handleInputChange}/>
-            <Button text="Add elem"/>
+            <ButtonOur text="Add elem"/>
+            <Button variant="contained" color="primary" onClick={debounceOnChange}>Add Elem</Button>
         </form>
     )
 }
