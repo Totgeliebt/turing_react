@@ -7,14 +7,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {store, persistor} from './app/store'
-import ShowHomework from "./Homework/19exercise";
+import ShowContext from './lifecoding/ShowContext'
 
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
                  <BrowserRouter>
-                     <ShowHomework/>
+                     <ShowContext/>
                </BrowserRouter>
           </PersistGate>
       </Provider>

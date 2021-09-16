@@ -1,19 +1,51 @@
 
 import React from 'react'
-import Common from './Homework/18exercise/index'
-// import ToDo from './pages/ToDo'
-import RefClassComponent from './lifecoding/ref'
+import {Link, Route, Switch} from 'react-router-dom'
+import ToDo from './pages/ToDo'
+import { makeStyles } from '@material-ui/core/styles';
+import ImagesGallery from "./pages/ImagesGallery";
+import { Link as MaterialLink} from '@material-ui/core'
+import { Typography } from '@material-ui/core'
+const useStyles = makeStyles((theme) => ({
+    root: {
+        '& > * + *': {
+            marginLeft: theme.spacing(2),
+        },
+    },
+}));
 
-class App extends React.Component {
-    render() {
+const App = () => {
+
+        const classes = useStyles();
         return (
             <>
-                <Common/>
-                <RefClassComponent/>
-                {/*<h1>APP JS</h1>*/}
-                {/*<ToDo/>*/}
+                <Typography className={classes.root}>
+                <MaterialLink component={Link}
+                              to='/'
+                              variant="body2"
+                              >Open ToDo page</MaterialLink>
+                <MaterialLink component={Link}
+                              to="/images_gallery"
+                              variant="body2"
+                              >Images gallery</MaterialLink>
+                <MaterialLink component={Link}
+                              to="/blocked page"
+                              variant="body2"
+                              >Blocked page</MaterialLink>
+                </Typography>
+                <Switch>
+                    <Route path="/blocked_page">
+                        <h1>Blocked page</h1>
+                    </Route>
+                    <Route path="/images_gallery">
+                        <ImagesGallery/>
+                    </Route>
+                    <Route path="/">
+                        <ToDo/>
+                    </Route>
+                </Switch>
             </>
         )
-    }
+
 }
 export default App;
