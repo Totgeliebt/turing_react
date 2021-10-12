@@ -1,0 +1,17 @@
+.button {
+    height: 40px;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #3b3bea;
+    color: white;
+    border: 1px solid blue;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.button:active {
+    background-color: #2a2aef;
+}
+
+.buttonImportant {
+    background-color: red;
+}
