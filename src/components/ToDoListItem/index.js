@@ -23,11 +23,10 @@ const ToDoListItem = ({elem, onDelete, onSave}) => {
         setIsEditing(false)
         setText(elem.value)
     }
-    console.log(text, elem)
+
     const handleSaveClick = () => {
         onSave(text)
         setIsEditing(false)
-        // handleCancelClick()
     }
 
     return (

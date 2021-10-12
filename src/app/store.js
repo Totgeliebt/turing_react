@@ -14,14 +14,13 @@ import {
     REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
-import { PersistGate } from 'redux-persist/integration/react'
 import { combineReducers } from 'redux'
 
 const persistConfig = {
     key: 'root',
     version: 1,
     storage,
-    blacklist: ['counter']
+    whitelist: []
 }
 const rootReducer =  combineReducers({
     counter: counterReducer,

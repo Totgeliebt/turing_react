@@ -1,17 +1,21 @@
-.handleForm {
-    padding: 16px;
-    margin: 4px;
-    border: 2px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    max-width: 250px;
-    height:130px;
-}
+/*.handleForm {*/
+/*    padding: 16px;*/
+/*    margin: 4px;*/
+/*    border: 2px solid black;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-around;*/
+/*    max-width: 250px;*/
+/*    height:130px;*/
+/*}*/
 
-.enterInput {
-    height: 32px;
-    border-radius: 8px;
-    font-size: 16px;
-    border: 1px solid blue;
+/*.enterInput {*/
+/*    height: 32px;*/
+/*    border-radius: 8px;*/
+/*    font-size: 16px;*/
+/*    border: 1px solid blue;*/
+/*}*/
+
+.form {
+    margin-bottom: 50px;
 }
