@@ -5,7 +5,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import { ImageList, ImageListItem, ImageListItemBar }from '@material-ui/core'
 import Pagination from '@material-ui/lab/Pagination';
 
-const BASE_URL = 'https://pixabay.com/api/';
+
+const BASE_URL_IMAGES = 'https://pixabay.com/api/';
 const API_KEY = '21784981-d13d311b92e9193e9bcd05db0';
 const PER_PAGE = 10
 
@@ -38,7 +39,7 @@ const ImagesGallery = () => {
 
     const getImages = async (query = 'cat', page= 1) => {
         setCurrentQuery(query)
-        const url = `${BASE_URL}?key=${API_KEY}&q=${query}&per_page=${PER_PAGE}&page=${page}`
+        const url = `${BASE_URL_IMAGES}?key=${API_KEY}&q=${query}&per_page=${PER_PAGE}&page=${page}`
         const response = await fetch(url)
 
 
